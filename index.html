@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emissão de Certificados</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container main-card"> <img src="logo.svg" alt="Logo" class="logo" />
+
+    <h1>Emissão de Certificados</h1> <p class="subtitle">Insira o **CNPJ** da sua empresa para baixar o certificado digital.</p> <form id="cnpjForm">
+      <input
+        type="text"
+        id="cnpjInput"
+        placeholder="00.000.000/0000-00"
+        maxlength="18"
+        required
+      />
+      <button type="submit" class="blue-btn">Baixar Certificado</button> </form>
+
+    <div id="messageBox" class="message hidden"></div>
+
+    <a href="admin-login.html" class="admin-link">Acesso Administrativo</a>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

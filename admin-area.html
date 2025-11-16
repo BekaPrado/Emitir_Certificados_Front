@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin - Upload de Planilha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container admin-card">
+    <img src="logo.svg" alt="Logo" class="logo logo-admin" />
+
+    <h1>Painel do Administrador</h1>
+    <p class="subtitle">Faça upload da planilha de empresas (Excel/CSV) para atualizar os dados do sistema.</p>
+
+    <!-- Container em duas colunas -->
+    <div class="admin-layout">
+      
+      <!-- Upload -->
+      <div class="upload-box">
+        <h2>📤 Atualização de Dados</h2>
+        <form id="uploadForm" class="form-upload">
+          <input type="file" id="arquivo" name="arquivo" accept=".xlsx,.xls,.csv" required />
+          <label for="arquivo" class="file-label">
+            <span id="fileText">Clique ou arraste o arquivo aqui (.xlsx, .xls, .csv)</span>
+          </label>
+          <button type="submit" class="blue-btn">Processar Planilha</button>
+        </form>
+        <div id="messageBox" class="message hidden"></div>
+      </div>
+
+      <!-- Histórico -->
+      <div class="historico-box">
+        <h2>📜 Histórico de Uploads</h2>
+        <label for="historicoLimit">Mostrar últimos:</label>
+        <select id="historicoLimit">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="all">Todos</option>
+        </select>
+
+        <table class="historico-table">
+          <thead>
+            <tr>
+              <th>Arquivo</th>
+              <th>Empresas</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody id="historicoBody"></tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <a href="index.html" class="back-link">← Voltar para a Tela Inicial</a>
+  </div>
+
+  <script src="admin-area.js"></script>
+</body>
+</html>
